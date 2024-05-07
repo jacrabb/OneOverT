@@ -88,14 +88,6 @@ const viewApp = {
 document.addEventListener('DOMContentLoaded', function () {
 	viewApp.init();
 
-	// event hndlr for test button
-	document.querySelector("#refreshButton").addEventListener("click", function(e) {
-		e.preventDefault();
-		let state = conversionApp.state.update("12hz");
-		viewApp.update(state);
-		//console.log(state);
-	});
-
 	// event bindings for input fields.
 	document.querySelector("#leftInput").addEventListener("keyup", function() {
 		viewApp.update(conversionApp.state.update(this.value));
