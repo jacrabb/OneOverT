@@ -156,7 +156,7 @@ export const conversion_app = ( () => {
         get unit()   { return this.result.unit;   },
         get otherDomain() { return this.result.domain.switchDomains(); },
         /*get domainUnits() { return this.result.domain.units; }*/
-        calc(newUnit, print=false) { return _calc(this.result.val, this.result.unit, newUnit, print); }
+        calc(newUnit, print=false) { return _calc(this.result.val, this.result.unit, newUnit, print).toFixed(2); }
     };
 
     const timeUnits = _tDomain.units;
